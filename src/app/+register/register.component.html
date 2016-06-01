@@ -1,0 +1,30 @@
+<p>
+  register works!
+</p>
+
+<div class="register-component">
+	<h1>Register</h1>
+	<fieldset>
+		<input type="text" placeholder="Name" ng-model="colonist.name" required="" minlength="3" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength"> 
+		<input type="number" placeholder="Age" ng-model="colonist.age" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required">
+		<div class="custom-select">
+			<select required="" name="occupation" ng-model="colonist.job_id" ng-class="{ placeholder: !colonist.job_id }" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required placeholder">
+				<option value="" class="placeholder">Select occupation</option>
+				<!-- ngRepeat: job in jobs -->
+				<option value="1" ng-repeat="job in jobs" class="ng-binding ng-scope">Dust farmer</option>
+				<!-- end ngRepeat: job in jobs -->
+				<option value="2" ng-repeat="job in jobs" class="ng-binding ng-scope">Alien hunter</option>
+				<!-- end ngRepeat: job in jobs -->
+				<option value="3" ng-repeat="job in jobs" class="ng-binding ng-scope">Battery technician</option>
+				<!-- end ngRepeat: job in jobs -->
+				<option value="4" ng-repeat="job in jobs" class="ng-binding ng-scope">Yoga teacher</option>
+				<!-- end ngRepeat: job in jobs -->
+				<option value="5" ng-repeat="job in jobs" class="ng-binding ng-scope">Front-end developer</option>
+				<!-- end ngRepeat: job in jobs -->
+			</select>
+		</div>
+	</fieldset>
+	<a [routerLink]="['/encounters']">Check in</a>
+
+
+</div>
