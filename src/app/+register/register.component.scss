@@ -1,0 +1,43 @@
+.register-component {
+	background: url("../images/register.jpeg") center/contain;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.home-component {
+	color: black;
+}
+
+a, 
+h1,
+fieldset {
+	display: flex;
+	align-self: center;
+	align-items: center;
+	height: 33.33%;
+}
+
+fieldset {
+	width: 100vw;
+}
+
+input[type="text"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder {
+color: blue !important;
+}
+ 
+input[type="text"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder { /* Firefox 18- */
+color: blue !important;  
+}
+ 
+input[type="text"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: blue !important;  
+}
+ 
+input[type="text"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder {  
+color: blue !important; 
+}

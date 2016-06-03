@@ -16,7 +16,7 @@ export class EncounterService {
 
     return this.http.get(this.encounterUrl)
                     .toPromise()
-                    .then( response => response.json().encounter )
+                    .then( response => response.json().encounters )
                     .catch( this.handleError)
 
   }

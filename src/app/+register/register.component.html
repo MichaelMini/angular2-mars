@@ -1,7 +1,3 @@
-<p>
-  register works!
-</p>
-
 <div class="register-component">
 	<h1>Register</h1>
 	<fieldset>
@@ -24,7 +20,30 @@
 			</select>
 		</div>
 	</fieldset>
-	<a [routerLink]="['/encounters']">Check in</a>
-
-
+	<!-- <a [routerLink]="['/encounters']">Check in</a> -->
+	<a [routerLink]="['/encounters']">Encounters</a>
 </div>
+<div>
+	<h1>{{ title}}</h1>
+	<form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
+		<div>
+			<label for="name">Name</label>
+			<input ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
+		</div>
+		<div>
+			<label for="name">Age</label>
+			<input ngControl="age" [(ngModel)]="colonist.age" id="age" type="number" reqired>
+		</div>
+		<div>
+			<label for="occupation">Selected Occupation</label>
+
+			<select ngControl="job" [(ngModel)]="colonist.job_id" class="form-control">
+				<option [value]="NO_OCCUPATION_SELECTED">Select an Occupation</option>
+				<option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
+			</select>
+			<button type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
+		</div>
+	</form>
+	
+</div>
+

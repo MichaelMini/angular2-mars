@@ -1,14 +1,17 @@
-<p>
-  home works!
-</p>
 	<a [routerLink]="['/home']">Home</a>
 	<a [routerLink]="['/register']">Arrival</a>
 	<a [routerLink]="['/encounters']">Encounters</a>
 	<a [routerLink]="['/report']">Report</a>
 
-	<div class="home-component">
-		<h1>Mars Colony 1</h1>
-		<a [routerLink]="['/register']">Arrival</a>
-		<h2>Tap circle to enter</h2>
-	</div>
+	<section class="home-component">
+		<div class="title">
+			<h1>Mars Colony 1</h1>
+		</div>
+		<div class="content">
+			<a [routerLink]="['/register']">Arrival</a>
+		</div>
+		<div class="end-note">
+			<h2>Tap circle to enter</h2>
+		</div>
+	</section>
 

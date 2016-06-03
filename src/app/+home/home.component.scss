@@ -1,0 +1,14 @@
+.home-component {
+	background: url("../images/mars-planet.jpg") center/cover;
+	color: gainboro;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.home-component div {
+	display: flex;
+	align-self: center;
+	align-items: center;
+	height: 33.33%;
+}

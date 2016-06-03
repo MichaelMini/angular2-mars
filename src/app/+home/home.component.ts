@@ -7,7 +7,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   selector: 'app-home',
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.css'],
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES]
   
 })
 export class HomeComponent implements OnInit {

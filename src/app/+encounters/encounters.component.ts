@@ -1,18 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Encounter } from '../shared/models';
+import { EncounterService } from '../shared/services';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+
 
 @Component({
   moduleId: module.id,
   selector: 'app-encounters',
   templateUrl: 'encounters.component.html',
   styleUrls: ['encounters.component.css'],
-  directives: [ROUTER_DIRECTIVES],
+  providers: [EncounterService],
+  directives: [ROUTER_DIRECTIVES]
 })
 export class EncountersComponent implements OnInit {
 
-  constructor() {}
+	public encounters: Encounter[];
+
+  constructor(
+  	private router: Router,
+  	private encounterService: EncounterService
+  	) {
+
+  }
 
   ngOnInit() {
+  	this.encounterService.getEncounter().then( result => this.encounters = result );
   }
 
 }
