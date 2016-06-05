@@ -10,7 +10,9 @@ export class EncounterService {
 
 	encounterUrl = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
-  constructor(private http: Http) {}
+  constructor(private http: Http) {
+    // load colonist here and save the id
+  }
 
   getEncounter(): Promise<Encounter[]> {
 

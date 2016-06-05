@@ -24,7 +24,9 @@ export class EncountersComponent implements OnInit {
   }
 
   ngOnInit() {
+  	console.log(this);
   	this.encounterService.getEncounter().then( result => this.encounters = result );
+  	
   }
 
 }

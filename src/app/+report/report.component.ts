@@ -30,14 +30,14 @@ export class ReportComponent implements OnInit {
 
   ngOnInit(): void {
 
-  	this.encounter = new Encounter(this.NO_ALIEN_SELECTED, moment().format('YYYY-MM-DD').toString(), null, this.encounter.colonist_id);
+  	this.encounter = new Encounter(this.NO_ALIEN_SELECTED, moment().format('YYYY-MM-DD').toString(), null, "8");
   	this.alienService.getAliens().then( result => this.aliens = result )
   }
 
   onSubmit(event, form): void {
   	console.log(this.encounter)
-  	// this.encounterService.createEncounter(this.encounter)
-  	// 					.then( encounter => this.router.navigate(['/encounters']))
+  	this.encounterService.createEncounter(this.encounter)
+  						.then( encounter => this.router.navigate(['/encounters']))
   }
 
   get noAlien() : boolean{

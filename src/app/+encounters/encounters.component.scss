@@ -1,0 +1,30 @@
+a {
+	text-decoration: none;
+}
+
+.encounters-component {
+	position: relative;
+	flex-direction: column;
+}
+
+.header {
+	top: 0px;
+}
+
+.header,
+.footer {
+	height: 33vh;
+	position: fixed;
+	align-self: center;
+	text-align: center;
+	width: 100%;
+}
+
+.footer {
+	background-color: black;
+	bottom: 0px;
+	a {
+		color: white;
+	}
+}
+

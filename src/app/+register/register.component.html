@@ -1,49 +1,29 @@
 <div class="register-component">
-	<h1>Register</h1>
-	<fieldset>
-		<input type="text" placeholder="Name" ng-model="colonist.name" required="" minlength="3" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength"> 
-		<input type="number" placeholder="Age" ng-model="colonist.age" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required">
-		<div class="custom-select">
-			<select required="" name="occupation" ng-model="colonist.job_id" ng-class="{ placeholder: !colonist.job_id }" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required placeholder">
-				<option value="" class="placeholder">Select occupation</option>
-				<!-- ngRepeat: job in jobs -->
-				<option value="1" ng-repeat="job in jobs" class="ng-binding ng-scope">Dust farmer</option>
-				<!-- end ngRepeat: job in jobs -->
-				<option value="2" ng-repeat="job in jobs" class="ng-binding ng-scope">Alien hunter</option>
-				<!-- end ngRepeat: job in jobs -->
-				<option value="3" ng-repeat="job in jobs" class="ng-binding ng-scope">Battery technician</option>
-				<!-- end ngRepeat: job in jobs -->
-				<option value="4" ng-repeat="job in jobs" class="ng-binding ng-scope">Yoga teacher</option>
-				<!-- end ngRepeat: job in jobs -->
-				<option value="5" ng-repeat="job in jobs" class="ng-binding ng-scope">Front-end developer</option>
-				<!-- end ngRepeat: job in jobs -->
-			</select>
-		</div>
-	</fieldset>
-	<!-- <a [routerLink]="['/encounters']">Check in</a> -->
-	<a [routerLink]="['/encounters']">Encounters</a>
-</div>
-<div>
-	<h1>{{ title}}</h1>
-	<form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
-		<div>
-			<label for="name">Name</label>
-			<input ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
-		</div>
-		<div>
-			<label for="name">Age</label>
-			<input ngControl="age" [(ngModel)]="colonist.age" id="age" type="number" reqired>
-		</div>
-		<div>
-			<label for="occupation">Selected Occupation</label>
 
-			<select ngControl="job" [(ngModel)]="colonist.job_id" class="form-control">
-				<option [value]="NO_OCCUPATION_SELECTED">Select an Occupation</option>
-				<option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
-			</select>
-			<button type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
-		</div>
-	</form>
-	
+	<h1>{{ title}}</h1>
+
+	<div>
+		<form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
+			<div>
+				<!-- <label for="name">Name</label> -->
+				<input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" class="name" type="text" required>
+			</div>
+			<div>
+				<!-- <label for="name">Age</label> -->
+				<input placeholder="Age" ngControl="age" [(ngModel)]="colonist.age" id="age" class="age" type="number" reqired>
+			</div>
+			<div>
+				<!-- <label for="occupation">Selected Occupation</label> -->
+
+				<select ngControl="job" [(ngModel)]="colonist.job_id" class="form-control">
+					<option [value]="NO_OCCUPATION_SELECTED">Select an Occupation</option>
+					<option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
+				</select>
+			</div>
+		</form>
+	</div>
+		
+	<button class="btn" type="submit" [disabled]="noOccupation || !registerForm.form.valid">Check in</button>
+
 </div>
 

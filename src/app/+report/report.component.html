@@ -62,7 +62,7 @@
 			<button type="submit" [disabled]="noAlien || !registerForm.form.valid">Submit</button>
 		</div>
 		<div>
-		<textarea placeholder="Action taken" ngControl="action" [(ngModel)]="encounter.action" name="action_taken" id="" cols="30" rows="10"></textarea>
+		<textarea placeholder="Action taken" ngControl="action" [(ngModel)]="encounter.action" name="action_taken" id="action" cols="30" rows="10" required></textarea>
 		</div>
 	</form>
 	

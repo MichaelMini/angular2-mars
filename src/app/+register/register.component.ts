@@ -16,7 +16,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-	title = "Hello World"
+	title = "Register"
 
 	public NO_OCCUPATION_SELECTED: string;
 	public occupations: IOccupation[];
@@ -37,7 +37,12 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(event, form): void {
   	this.colonistService.createColonist(this.colonist)
-  						.then( colonist => this.router.navigate(['/encounters']))
+  						.then( (colonist) => {
+  							// save colonist to localStorage here
+
+  							this.router.navigate(['/encounters'])
+  						});
+
   }
 
   get noOccupation() : boolean{
