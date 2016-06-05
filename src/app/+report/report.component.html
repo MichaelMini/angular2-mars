@@ -6,51 +6,9 @@
 <!-- ngInclude: '/app/shared/templates/app-header.html' -->
 	<h1 class="page-heading">
 		Report Encounter 
-		<span>Safety on Mars is your responsibility</span>
 	</h1>
-	<form action="" class="mars-form ng-pristine ng-invalid ng-invalid-required" name="reportForm" ng-class="{ 'show-validation': showValidation }" novalidate="">
-		<fieldset>
-			<div class="custom-select">
-				<select required="" name="alienType" ng-model="encounter.atype" ng-class="{ placeholder: !alienType }" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required placeholder">
-					<option value="" class="placeholder">Select alien type</option>
-					<!-- ngRepeat: alien in alienTypes -->
-					<option value="Ectomorph" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Ectomorph</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Endomorph" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Endomorph</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Green man" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Green man</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Grey man" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Grey man</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Big-nose-flat-head" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Big-nose-flat-head</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Octospider" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Octospider</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-					<option value="Octospider" ng-repeat="alien in alienTypes" class="ng-binding ng-scope">Octospider</option>
-					<!-- end ngRepeat: alien in alienTypes -->
-				</select>
-			</div>
-			<textarea placeholder="Action taken" ng-model="encounter.action" name="Action_taken" id="" rows="10" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"></textarea>
-			<grammarly-btn>
-				<div style="z-index: 2; opacity: 1; transform: translate(1374px, 348px);" class="_9b5ef6-textarea_btn _9b5ef6-show _9b5ef6-field_hovered _9b5ef6-not_focused" data-grammarly-reactid=".0">
-					<div class="_9b5ef6-transform_wrap" data-grammarly-reactid=".0.0">
-						<div title="Protected by Grammarly" class="_9b5ef6-status" data-grammarly-reactid=".0.0.0">
-							&nbsp;
-						</div>
-					</div>
-				</div>
-			</grammarly-btn>
-		</fieldset>
-		<fieldset>
-			<button class="button" ng-click="submitReport($event, reportForm)">
-				<a [routerLink]="['/encounters']">Submit Report</a>
-			</button>
-		</fieldset>
-	</form>
-</div>
-
-<div>
-	<h1>{{ title}}</h1>
+	<p>Safety on Mars is your responsibility</p>
+	
 	<form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
 		<div>
 			<label for="alien">Selected Alien Type</label>
@@ -59,11 +17,11 @@
 				<option [value]="NO_ALIEN_SELECTED">Select alien type</option>
 				<option *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type }}</option>
 			</select>
-			<button type="submit" [disabled]="noAlien || !registerForm.form.valid">Submit</button>
 		</div>
 		<div>
 		<textarea placeholder="Action taken" ngControl="action" [(ngModel)]="encounter.action" name="action_taken" id="action" cols="30" rows="10" required></textarea>
 		</div>
+		<button type="submit" [disabled]="noAlien || !registerForm.form.valid">Submit</button>
 	</form>
 	
 </div>
