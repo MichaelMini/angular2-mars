@@ -1,19 +1,40 @@
+body {
+	background-color: black;
+}
+
+h1, h2, h3, a, .btn {
+	font-size: 2rem;
+	font-weight: lighter;
+	color: white;
+	margin: 60px 0 0 0;
+}
+
 a {
 	text-decoration: none;
+}
+
+ul, .report-page {
+	padding-top: 100px;
 }
 
 label {
 	display: none;
 }
 
+button {
+	background-color: transparent;
+	color: white;
+	border: none;
+}
+
 .header {
 	top: 0px;
+	height: 130px;
 }
 
 .header,
 .footer {
 	background-color: white;
-	height: 18vh;
 	position: fixed;
 	align-self: center;
 	text-align: center;
@@ -22,13 +43,71 @@ label {
 
 .footer {
 	background-color: black;
+	height: 200px;
+	padding-bottom: 60px;
 	bottom: 0px;
 	display: flex;
 	justify-content: center;
 	a {
-		color: white;
+		// color: white;
 		align-self: center;
-		font-size: 1rem;
+		// font-size: 1rem;
 	}
 }
 
+.name,
+.age,
+.form-control,
+.btn {
+	border: none;
+	width: 1418px;
+	background: transparent;
+}
+
+.name,
+.age,
+.form-control,
+.action {
+    border-bottom: 1px solid #fff;
+    font-size: 1rem;
+    color: red;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+
+.btn {
+   	// font-size: 1.8rem;
+   	margin: 60px auto;
+}
+
+.form-control {
+	box-sizing: border-box;
+	outline: none;
+   	color: red;
+
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+}
+textarea::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder {
+	color: red !important;
+}
+textarea:-moz-placeholder,
+input[type="text"]:-moz-placeholder,
+input[type="number"]:-moz-placeholder { /* Firefox 18- */
+	color: red !important;  
+}
+textarea::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder {  /* Firefox 19+ */
+	color: red !important;  
+}
+textarea:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder {  
+	color: red !important; 
+}

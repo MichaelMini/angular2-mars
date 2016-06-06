@@ -19,62 +19,6 @@ fieldset {
 	height: 33.33%;
 }
 
-// fieldset {
-// 	width: 100vw;
-// }
-
-.name,
-.age,
-.form-control,
-.btn {
-	border: none;
-	width: 1418px;
-	background: transparent;
-    color: black;
-}
-
-.name,
-.age,
-.form-control {
-    border-bottom: 1px solid #fff;
-    font-size: 1.3rem;
-    color: red;
-    margin-bottom: 20px;
-    padding: 0 0 10px 30px;
-}
-
-.form-control {
-	box-sizing: border-box;
-	outline: none;
-   	// color: red;
-
-   -moz-appearance: none;
-   -webkit-appearance: none;
-   appearance: none;
-}
-
-.btn {
-   	font-size: 1.8rem;
-   	font-weight: bold;
-   	margin: 60px auto;
-}
-
-input[type="text"]::-webkit-input-placeholder,
-input[type="number"]::-webkit-input-placeholder {
-color: red !important;
-}
- 
-input[type="text"]:-moz-placeholder,
-input[type="number"]:-moz-placeholder { /* Firefox 18- */
-color: red !important;  
-}
- 
-input[type="text"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
-color: red !important;  
-}
- 
-input[type="text"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder {  
-color: red !important; 
+.12 {
+	display: none;
 }

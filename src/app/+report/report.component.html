@@ -1,15 +1,17 @@
-<p>
+<!-- <p>
   report works!
-</p>
+</p> -->
 
 <div class="report-page ng-scope">
 <!-- ngInclude: '/app/shared/templates/app-header.html' -->
-	<h1 class="page-heading">
-		Report Encounter 
-	</h1>
-	<p>Safety on Mars is your responsibility</p>
-	
 	<form #registerForm="ngForm" (ngSubmit)="onSubmit($event, registerForm)">
+	
+		<div class="header">
+			<h1 class="report-heading">
+				Report Encounter 
+			</h1>
+			<span>Safety on Mars is your responsibility</span>
+		</div>
 		<div>
 			<label for="alien">Selected Alien Type</label>
 
@@ -18,10 +20,14 @@
 				<option *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type }}</option>
 			</select>
 		</div>
-		<div>
-		<textarea placeholder="Action taken" ngControl="action" [(ngModel)]="encounter.action" name="action_taken" id="action" cols="30" rows="10" required></textarea>
+		<div class="action-wrapper">
+			<textarea placeholder="Action taken" ngControl="action" [(ngModel)]="encounter.action" name="action_taken" class="action" id="action" required></textarea>
 		</div>
-		<button type="submit" [disabled]="noAlien || !registerForm.form.valid">Submit</button>
+
+		<div class="footer">
+			<button class="btn" type="submit" [disabled]="noAlien || !registerForm.form.valid">Submit Report</button>
+		</div>
+			
 	</form>
-	
+
 </div>

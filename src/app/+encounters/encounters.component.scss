@@ -3,31 +3,9 @@
 .encounters-component {
 	position: relative;
 	flex-direction: column;
-}
-
-.header {
-	top: 0px;
-}
-
-.header,
-.footer {
 	background-color: white;
-	height: 18vh;
-	position: fixed;
-	align-self: center;
-	text-align: center;
-	width: 100%;
-}
-
-.footer {
-	background-color: black;
-	bottom: 0px;
-	display: flex;
-	justify-content: center;
-	a {
-		color: white;
-		align-self: center;
-		font-size: 1rem;
+	h1 {
+		color: black;
 	}
 }
 
