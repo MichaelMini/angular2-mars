@@ -1,5 +1,5 @@
 .register-component {
-	background: url("../images/register.jpeg") center/contain no-repeat;
+	background: url("../images/register.jpeg") center/cover no-repeat;
 	background-color: black;
 	height: 100vh;
 	display: flex;
@@ -17,8 +17,4 @@ fieldset {
 	align-self: center;
 	align-items: center;
 	height: 33.33%;
-}
-
-.12 {
-	display: none;
 }
