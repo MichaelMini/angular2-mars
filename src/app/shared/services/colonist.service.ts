@@ -30,13 +30,3 @@ export class ColonistService {
   }
 
 }
-
-/*
-
-OccupationService.getJobs()
-					.then(()=>{
-						this.jobs = jobs
-					})
-					.catch(()=>{})
-
-*/

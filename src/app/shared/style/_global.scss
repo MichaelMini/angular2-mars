@@ -50,9 +50,7 @@ button {
 	display: flex;
 	justify-content: center;
 	a {
-		// color: white;
 		align-self: center;
-		// font-size: 1rem;
 	}
 }
 
@@ -79,18 +77,17 @@ button {
 
 
 .btn {
-   	// font-size: 1.8rem;
-   	margin: 60px auto;
+	margin: 60px auto;
 }
 
 .form-control {
 	box-sizing: border-box;
 	outline: none;
-   	color: red;
+	color: red;
 
-   -moz-appearance: none;
-   -webkit-appearance: none;
-   appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 }
 textarea::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,

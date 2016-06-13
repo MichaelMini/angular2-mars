@@ -23,8 +23,8 @@ export class Encounter {
 
 export class Colonist {
 	constructor(
-        public name : string,
-        public age : number,
-        public job_id : string
+		public name : string,
+		public age : number,
+		public job_id : string
 	){}
 }

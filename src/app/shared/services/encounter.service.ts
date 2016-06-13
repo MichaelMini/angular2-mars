@@ -41,13 +41,3 @@ export class EncounterService {
   }
 
 }
-
-/*
-
-OccupationService.getJobs()
-					.then(()=>{
-						this.jobs = jobs
-					})
-					.catch(()=>{})
-
-*/
