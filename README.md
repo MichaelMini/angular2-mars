@@ -1,4 +1,4 @@
-# Angular2 - Mars Colony App
+# Mars Colony App - Angular2
 
 ## Project Description - http://angular2-mars.surge.sh
 
