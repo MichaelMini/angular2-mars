@@ -1,1 +1,1 @@
-angular2-mars.surge.sh
+http://angular2-mars.surge.sh
