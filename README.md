@@ -1,6 +1,6 @@
 # Mars Colony App - Angular2
 
-Fifth Project for RED Academy - Full-Time Web Developer Professional
+Fifth Project for RED Academy - Full-Time Front-End Web Developer Professional
 
 ## Project Description - http://angular2-mars.surge.sh
 
