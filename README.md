@@ -2,6 +2,8 @@
 
 Fifth Project for RED Academy - Full-Time Front-End Web Developer Professional
 
+![image](https://cloud.githubusercontent.com/assets/16886114/16460328/aa28e032-3ddb-11e6-9899-e853942791fd.png)
+
 ## Project Description - http://angular2-mars.surge.sh
 
 This app lets you report alien encounters on Mars, uses Angulars Http service to get and post data to the API.
